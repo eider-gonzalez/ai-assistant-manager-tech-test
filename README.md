@@ -10,27 +10,27 @@ La aplicación está construida con **Next.js (App Router)**, **TypeScript**, **
 
 ## 🚀 Tecnologías utilizadas
 
-* **Next.js (App Router)** – Framework principal
-* **React + TypeScript** – UI tipada y mantenible
-* **Tailwind CSS** – Estilos utilitarios y diseño responsive
-* **shadcn/ui** – Sistema de componentes reutilizables construido sobre Radix UI
-* **Radix UI** – Primitivos accesibles (Dialog, Select, Dropdown, etc.)
-* **Zustand** – Estado global (UI, modal, asistente seleccionado, chat)
-* **TanStack React Query** – Manejo de estado asíncrono (fetch, mutations)
-* **React Hook Form** – Manejo y validación de formularios
-* **Sonner** – Sistema de notificaciones (toasts)
-* **Lucide React** – Iconografía
+- **Next.js (App Router)** – Framework principal
+- **React + TypeScript** – UI tipada y mantenible
+- **Tailwind CSS** – Estilos utilitarios y diseño responsive
+- **shadcn/ui** – Sistema de componentes reutilizables construido sobre Radix UI
+- **Radix UI** – Primitivos accesibles (Dialog, Select, Dropdown, etc.)
+- **Zustand** – Estado global (UI, modal, asistente seleccionado, chat)
+- **TanStack React Query** – Manejo de estado asíncrono (fetch, mutations)
+- **React Hook Form** – Manejo y validación de formularios
+- **Sonner** – Sistema de notificaciones (toasts)
+- **Lucide React** – Iconografía
 
 ---
 
 ## 📂 Arquitectura
 
-La arquitectura está diseñada para separar claramente responsabilidades:
+La arquitectura separa claramente responsabilidades:
 
-* **UI / Componentes**: Renderizado y experiencia de usuario
-* **Zustand**: Estado global sincrónico y compartido
-* **React Query**: Operaciones asíncronas y cache
-* **Servicios mock**: Simulación de backend
+- **UI / Componentes** → Renderizado y experiencia de usuario
+- **Zustand** → Estado global sincrónico y compartido
+- **React Query** → Operaciones asíncronas y cache
+- **Servicios mock** → Simulación de backend
 
 Esto permite que el proyecto sea escalable y que los servicios mock puedan reemplazarse fácilmente por una API real.
 
@@ -40,11 +40,11 @@ Esto permite que el proyecto sea escalable y que los servicios mock puedan reemp
 
 ### UI (shadcn/ui + Sonner)
 
-Se utilizó **shadcn/ui** como base de componentes por su:
+Se utilizó **shadcn/ui** por su:
 
-* Accesibilidad por defecto
-* Diseño limpio y profesional
-* Facilidad de personalización
+- Accesibilidad por defecto
+- Diseño limpio y profesional
+- Facilidad de personalización
 
 Para feedback al usuario (errores, confirmaciones, éxito), se utilizó **Sonner**, permitiendo notificaciones claras y no intrusivas durante las operaciones CRUD y validaciones.
 
@@ -52,10 +52,10 @@ Para feedback al usuario (errores, confirmaciones, éxito), se utilizó **Sonner
 
 Se utiliza para manejar:
 
-* Lista de asistentes en memoria
-* Asistente seleccionado
-* Estado del modal (abierto/cerrado, modo, paso)
-* Historial del chat por asistente
+- Lista de asistentes en memoria
+- Asistente seleccionado
+- Estado del modal (abierto/cerrado, modo, paso)
+- Historial del chat por asistente
 
 Se eligió Zustand por su simplicidad, bajo boilerplate y facilidad para manejar estado global sincrónico.
 
@@ -63,16 +63,16 @@ Se eligió Zustand por su simplicidad, bajo boilerplate y facilidad para manejar
 
 Se utiliza para:
 
-* Obtener asistentes
-* Crear, editar y eliminar asistentes
-* Guardar entrenamiento
+- Obtener asistentes
+- Crear, editar y eliminar asistentes
+- Guardar entrenamiento
 
 React Query gestiona automáticamente:
 
-* Estados de carga
-* Manejo de errores
-* Invalidación de queries
-* Optimistic updates
+- Estados de carga
+- Manejo de errores
+- Invalidación de queries
+- Optimistic updates
 
 Esto mejora la UX y mantiene el código limpio.
 
@@ -80,8 +80,8 @@ Esto mejora la UX y mantiene el código limpio.
 
 Las operaciones se simulan en memoria con:
 
-* Delays artificiales (100–500ms)
-* Probabilidad de error (por ejemplo, 10% al eliminar)
+- Delays artificiales (100–500ms)
+- Probabilidad de error (por ejemplo, 10% al eliminar)
 
 Esto permite demostrar manejo de estado y UX sin necesidad de backend real.
 
@@ -89,17 +89,16 @@ Esto permite demostrar manejo de estado y UX sin necesidad de backend real.
 
 ## 🧩 Funcionalidades implementadas
 
-* Listado de asistentes con estados de carga y estado vacío
-* Modal de creación/edición en 2 pasos con validaciones
-* Eliminación con confirmación y feedback visual
-* Página de entrenamiento por asistente
-* Guardado de reglas de entrenamiento
-* Chat simulado con:
-
-  * Delay en respuestas
-  * Indicador de "escribiendo"
-  * Reinicio de conversación
-* Diseño responsive (mobile / desktop)
+- Listado de asistentes con estados de carga y estado vacío
+- Modal de creación/edición en 2 pasos con validaciones
+- Eliminación con confirmación y feedback visual
+- Página de entrenamiento por asistente
+- Guardado de reglas de entrenamiento
+- Chat simulado con:
+  - Delay en respuestas
+  - Indicador de "escribiendo"
+  - Reinicio de conversación
+- Diseño responsive (mobile / desktop)
 
 ---
 
@@ -139,11 +138,11 @@ http://localhost:3000
 
 ---
 
-## 🧪 Qué dejé fuera (priorización)
+## 🧪 Qué se dejó fuera (priorización)
 
-* Persistencia real en base de datos
-* Autenticación
-* Tests automatizados
+- Persistencia real en base de datos
+- Autenticación
+- Tests automatizados
 
 Estas decisiones se tomaron para priorizar la calidad del manejo de estado, la arquitectura y la experiencia de usuario dentro del tiempo disponible.
 
@@ -153,10 +152,10 @@ Estas decisiones se tomaron para priorizar la calidad del manejo de estado, la a
 
 Aproximadamente **8 horas**, incluyendo:
 
-* Análisis de requerimientos
-* Diseño de arquitectura
-* Implementación
-* Ajustes de UX y validaciones
+- Análisis de requerimientos
+- Diseño de arquitectura
+- Implementación
+- Ajustes de UX y validaciones
 
 ---
 
